@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
 
-const Photo = props => (
+function Photo(props){
+  const photo = props
+  return(
   <div>
-      <h3>{props.photo.title}</h3>
-      <img src={props.photo.url} alt={props.photo.title} />
-      <p>{props.photo.explanation</p>
+      <h3>{photo.title}</h3>
+      <img src={photo.url} alt={photo.title} />
+      <p>{photo.explanation}</p>
   </div>
-);
+  )
+}
 
 export default Photo;
