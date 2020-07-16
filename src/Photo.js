@@ -2,11 +2,9 @@ import React from "react";
 import "./App.css";
 import styled from "styled-components"
 
+
 const PhotoStyling = styled.div`
-  body {
-    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-    background-attachment: fixed;
-  }
+ 
 
   img {
     padding: 3vh;
@@ -20,23 +18,37 @@ const PhotoStyling = styled.div`
   }
 
   h3, p { 
-    padding: 4vh;
-    border: 2px solid grey; 
-    background-color: lightgrey;
+    padding: 7vh;
+    border-top: 15px solid navy; 
+    border-bottom: 15px solid navy; 
+    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-attachment: fixed;
+    
   }
 
   h3 {
     font-family: Impact;
     font-size: 3rem;
-    color: navy;
+    color: blue;
+  }
+
+  div {
+    height: 200vh; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 90%; 
   }
 
   p {
     font-family: Courier; 
     font-size: 1.5rem;
+    color: whitesmoke;
     width: 75%;
     margin-left: auto;
     margin-right: auto; 
+    margin-bottom: 15vh;
+    margin-top: -20vh;
+   
   }
 
   .photoFrame {
@@ -50,9 +62,9 @@ const PhotoStyling = styled.div`
 function Photo(props){
   const {photo} = props
   return( 
-  <PhotoStyling class='photoFrame'>
+  <PhotoStyling>
       <h3>{photo.title}</h3>
-      <img src={photo.url} alt={photo.title} />
+      <div style={{backgroundImage: `url(${photo.url})`}}></div>
       <p>{photo.explanation}</p>
   </PhotoStyling>
   )
