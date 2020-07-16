@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
 
-const Date = props => <div>Date</div>
+function Date(props){
+  const {date} = props
+  return(
+<div>{date.date}</div>
+  )
+}
 
 export default Date;
