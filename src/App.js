@@ -2,7 +2,6 @@ import React, {useState, useEffect } from "react";
 import Date from "./Date";
 import Photo from "./Photo.js";
 import axios from "axios";
-import styled from "styled-components";
 import "./App.css";
 
 function App() {
